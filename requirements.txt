@@ -1,0 +1,5 @@
+spacy
+torch
+flask
+flask_sqlalchemy
+transformers
