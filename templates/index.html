@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}"
-<h1> Testing to see if this shit is working</h1>
+<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+{% endblock %}
+
+
+{% block body %}
+<a href="{{url_for('login')}}"> Click here for login page</a>
 {% endblock %}
 
