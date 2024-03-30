@@ -1,88 +1,37 @@
 {% extends 'base.html' %}
 
 {% block head %}
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script
-   src="https://kit.fontawesome.com/64d58efce2.js"
-   crossorigin="anonymous"
-  ></script>
-  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
-  <title>Sum-a-Rise</title>`
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Glassmorphism login Form Tutorial in html css</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
 {% endblock %}
 
- {%block body%}
-  <div class="container">
-   <div class="forms-container">
-    <div class="signin-signup">
-     <form action="#" class="sign-in-form">
-      <h2 class="title">Sign in</h2>
-      <div class="input-field">
-       <i class="fas fa-user"></i>
-       <input type="text" placeholder="Username" />
-      </div>
-      <div class="input-field">
-       <i class="fas fa-lock"></i>
-       <input type="password" placeholder="Password" />
-      </div>
-      <input class="btn solid" type="submit" value="Login" />
-     
-      
-     </form>
-     <form action="#" class="sign-up-form">
-      <h2 class="title">Sign up</h2>
-      <div class="input-field">
-       <i class="fas fa-user"></i>
-       <input type="text" placeholder="Username" />
-      </div>
-      <div class="input-field">
-       <i class="fas fa-envelope"></i>
-       <input type="email" placeholder="Email" />
-      </div>
-      <div class="input-field">
-       <i class="fas fa-lock"></i>
-       <input type="password" placeholder="Password" />
-      </div>
-      <input type="submit" class="btn" value="Sign up" />
-      
-      
-     </form>
+
+{% block body %}
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
     </div>
-   </div>
+    <form>
+        <h3>Login Here</h3>
 
-   <div class="panels-container">
-    <div class="panel left-panel">
-     <div class="content">
-      <h3> New Here ?</h3>
-      <button class="btn transparent" id="sign-up-btn">Sign up</button>
-     </div>
-     <img src="{{url_for('static', filename='/image/bg1.jpg')}}" class="image" alt="background img" />
-    </div>
-    <div class="panel right-panel">
-     <div class="content">
-      <h3>Be with us !</h3>
-      <p>
-        Sum-a-Rise ease the work. 
-      </p>
-      <button class="btn transparent" id="sign-in-btn">Sign in</button>
-     </div>
-     <img src="{{url_for('static', filename='/image/register.svg')}}" class="image" alt="register.svg here"/>
-    </div>
-   </div>
-  </div>
-  <script>
-    const sign_in_btn = document.querySelector('#sign-in-btn');
-    const sign_up_btn = document.querySelector('#sign-up-btn');
-    const container = document.querySelector('.container');
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
 
-    sign_up_btn.addEventListener('click', () => {
-      container.classList.add('sign-up-mode');
-    });
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
 
-    sign_in_btn.addEventListener('click', () => {
-      container.classList.remove('sign-up-mode');
-    });
+        <button>Log In</button>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+    </form>
+    {% endblock %}
 
-
-</script>
-{% endblock %}
