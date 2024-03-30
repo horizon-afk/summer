@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block home %}
+<title>SUM-A-RISE Here!!</title>
+<link rel="stylesheet" href="{{url_for('static', filename='home.css')}}" />
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <h1>SUM-A-RISE Here!!</h1>
+    <div>
+      <form id="summaryForm" method="post">
+        <h3>Enter your text to be summarized:</h3>
+          <br>
+        </div>
+        <textarea placeholder="Paste your passage here!" name="text"></textarea>
+        <br>
+        <button class="btn btn-primary" id="summarizeButton" type="submit" value="Summarize" onclick="loading()">Summarize</button>
+        <input type="file" id="audioVideoFile" message="Choose" name="file" style="display: none;">  <br>
+        <h3>OR</h3>
+        <h3>Upload Your audio/video file:</h3>
+        <input type="file" message=Choose name=file>
+        <div class="write-container">
+          <p contenteditable="true" class="output-box"></p>
+          <br>
+        <img id="loading">  
+    </form>
+    </div>
+    <script>
+
+        const writeContainer = document.querySelector(".write-container");
+        const createBtn = document.querySelector(".btn");
+        let notes = document.querySelectorAll(".output-box");
+
+        createBtn.addEventListener("click", ()=>{
+            let outputBox = document.createElement("p");
+            outputBox.className = "output-box";
+            outputBox.setAttribute("contenteditable", "true");
+            writeContainer.appendChild(outputBox);
+        })
+
+    </script>
+{% endblock %}
+
