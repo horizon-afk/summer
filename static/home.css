@@ -1,21 +1,24 @@
-/* Import fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400|Noto+Serif:300,400');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* General styles */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  /* Use a fallback font */
-  margin: 0;
-  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue','Montserrat' sans-serif;  /* Use a fallback font */
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background:linear-gradient(135deg, #FFB38E, #FFFDCB);
+  padding-top: 50px;
 }
 
 /* Container styles */
 .container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #cf9aff, #95c0ff);
-  color: rgb(174, 238, 11);
+  background: linear-gradient(135deg, #FFB38E, #FFFDCB);
+  color: #3c3633;
   padding-top: 4%;
   text-align: center;
 }
@@ -27,28 +30,39 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out; /* Add hover effect */
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* Textarea styles */
 textarea {
   width: 70%;  /* Adjust width as needed */
   padding: 20px;
-  border: 2px solid #0e24e7;
+  border: none;
   font-size: 16px;  /* Adjust font size */
   resize: none; /* Prevent resizing */
+  border-radius: 10px;
+  margin-top: 50px;
 }
 
 /* File input styles */
 input[type="file"] {
   margin: 10px auto;  /* Center the file input horizontally */
   padding: 10px 20px; /* Adjust padding if needed */
-  border: 1px solid #ccc;  /* Add a border */
+  border: 1px solid #ded9d9ce;  /* Add a border */
   cursor: pointer;
+  font-size: 18px;
+  
+
 }
 
 /* Headings */
 h3 {
   text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+
 }
 
 /* Output box styles */
@@ -61,11 +75,62 @@ h3 {
   padding: 20px;
   margin: 20px auto;  /* Center the output box horizontally */
   outline: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 30px;
 }
 
 /* "OR" section styles */
 .or {
   padding: 10px; /* Adjust padding as needed */
-  color: #eb13
+  color: #eb13;
+  font-weight: bold;
+  font-weight: 300;
+}
+
+.btn {
+ padding: 10px;
+ margin: none;
+ background: #fff2ec;
+ color: #000000de;
+ cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Add hover effect */
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  display: none;
+}
+
+.btn2{
+  padding: 20px;
+ margin: none;
+ background: #fdf3ef;
+ color: #000000de;
+ cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Add hover effect */
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  
+}
+.custom-file{
+  background: rgb(255, 248, 239);
+  padding: 20px;
+  margin: none;
+  border-radius: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Add hover effect */
+  border-radius: 30px;
+  font-weight: bold;
+}
+.custom-file :hover{
+  transition:0.3s;
+  text-decoration: none;
+  color: #fff2ec;
+  background: #FFB38E;
 }

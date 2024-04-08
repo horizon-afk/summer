@@ -2,7 +2,7 @@
 
 {% block head %}
 <title>SUM-A-RISE Here!!</title>
-<link rel="stylesheet" href="{{url_for('static', filename='home.css')}}" />
+<link rel="stylesheet" href="/static/home.css" />
 {% endblock %}
 
 
@@ -20,9 +20,11 @@
         <button class="btn btn-primary" id="summarizeButton" type="submit" value="Summarize" onclick="loading()">Summarize</button>
         <br>
         <h3>OR</h3>
-        <h3>Upload Your audio/video file:</h3>
-        <input type="file" message=Choose name='file'>
-        <input type="submit" value="Submit">
+        <label class="custom-file">
+        <input  class="btn" type="file" message=Choose name='file' style="margin: none; padding: auto; font-size: 14px; cursor: pointer;" >
+        Upload pdf here
+        </label>
+        <input class="btn2" type="submit" value="Submit" style="padding: auto; font-size: 14px; cursor: pointer; margin: none; ">
         <div class="write-container">
           <p contenteditable="true" class="output-box"> {{ summary }} </p>
           <br>

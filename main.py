@@ -85,10 +85,6 @@ def allowed_file(filename):
         
 
 
-# @app.route('/home')
-# def home():
-#     return
-
 
 
 
