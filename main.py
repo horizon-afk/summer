@@ -8,7 +8,7 @@ import os
 
 ## for testing purposes
 import app.manager.PDFHandler as PDFHandler
-from summarizers import extract_sum
+from summarizers import extract_sum, abstrat
 
 
 UPLOAD_FOLDER = "uploads"
@@ -44,7 +44,7 @@ def home():
         text = pdf.text()
         os.remove(path_to_file)
         
-        summary = extract_sum.summarize(text,0.5)
+        summary = abstrat.summarize(text)
         
         
         return render_template('home.html', summary = summary)
