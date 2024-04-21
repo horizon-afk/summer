@@ -7,7 +7,7 @@ def summarize(text: str):
     tokenizer = AutoTokenizer.from_pretrained('t5-base')
 
 
-    tokens_input = tokenizer.encode("summarize: " + input_text,
+    tokens_input = tokenizer.encode("summarize: " + text,
                               return_tensors='pt',
                               max_length=tokenizer.model_max_length,
                               truncation=True)
