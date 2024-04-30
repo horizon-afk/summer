@@ -8,30 +8,33 @@
 
 {% block body %}
 <div class="container">
-    <h1>SUM-A-RISE Here!!</h1>
+    <h1>SUMM-A-RISE Here!!</h1>
     <div>
-      <form action='/home' id="summaryForm" method="post" enctype="multipart/form-data">
+      <form action='/' id="summaryForm" method="post" enctype="multipart/form-data">
         <h3>Enter your text to be summarized:</h3>
           <br>
     </div>
         
         <textarea placeholder="Paste your passage here!" name="text"></textarea>
         <br>
-        <button class="btn btn-primary" id="summarizeButton" type="submit" value="Summarize" onclick="loading()">Summarize</button>
         <br>
+
+        <input class="btn2" type="submit" value="Summary" name="action">
+
         <h3>OR</h3>
         <label class="custom-file">
         <input  class="btn" type="file" message=Choose name='file' style="margin: none; padding: auto; font-size: 14px; cursor: pointer;" >
         Upload pdf here
         </label>
-        <input class="btn2" type="submit" value="Submit" style="padding: auto; font-size: 14px; cursor: pointer; margin: none; ">
+        <input class="btn2" type="submit" name="action" value="Upload" style="padding: auto; font-size: 14px; cursor: pointer; margin: none; ">
         <div class="write-container">
-          <p contenteditable="true" class="output-box"> {{ summary }} </p>
+          <p contenteditable="true" class="output-box" id="output"> {{ summary }} </p>
           <br>
-         
+         <button>Copy to Clipboard</button>
         </div>
       </form>
 </div>
+
 
 {% endblock %}
 
